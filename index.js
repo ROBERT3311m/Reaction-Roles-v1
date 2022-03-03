@@ -59,9 +59,9 @@ messageA.react(db.get(`rec${message.guild.id}`, "emoji"))
 client.on('raw', packet => {
 if(!['MESSAGE_REACTION_ADD', 'MESSAGE_REACTION_REMOVE'].includes(packet.t)) return;
 if (packet.t == 'MESSAGE_REACTION_ADD') {
-if(packet.d.message_id == db.get(packet.d.guild_id, "message")) { // ايدي المسج
+if(packet.d.message_id == db.get(packet.d.guild_id, "948821830465122314")) { // ايدي المسج
 let emoji = packet.d.emoji.id ? `${packet.d.emoji.name}:${packet.d.emoji.id}` : packet.d.emoji.name;
-if(emoji == db.get(packet.d.guild_id, "emoji")){ // الايموجي الي بيضغط عليه عشان يسوي تكت
+if(emoji == db.get(packet.d.guild_id, "📩")){ // الايموجي الي بيضغط عليه عشان يسوي تكت
 let u = client.users.get(packet.d.user_id);
 let channel = client.channels.get(db.get(packet.d.guild_id, "channel"));
 if(channel.type == "dm"||!channel.guild) return; // ._.
@@ -126,4 +126,4 @@ client.on("message", async message => {
        }
   });
 
-client.login("token");
+client.login("OTQ4ODIyMzU4OTA1NDc5MjM4.YiBZrg.Q63mxSKUk1HI-AZyOe74CZZW_oc");
